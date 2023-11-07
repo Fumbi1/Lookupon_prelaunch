@@ -4,6 +4,9 @@ import { useRouter } from "next/navigation";
 import React, { useState, useRef } from "react";
 
 const Notify = ({ OnPress }) => {
+  let OnPressX = null;
+
+  OnPress = OnPress || OnPressX;
   const Location = useRouter();
   const [email, setEmail] = React.useState("");
 //   const abortControllerRef  = useRef<AbortController | null>(null);

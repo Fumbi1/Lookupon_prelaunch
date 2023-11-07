@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 const White = ({title, location}) => {
     const route = useRouter();
     let titleX = "Sign Up";
-    let locationX = "/";
+    let locationX = "./paths/buttonBlue";
 
     title = title || titleX
     location = location || locationX

@@ -5,6 +5,9 @@ import React, { useState } from 'react';
 import { useRouter } from "next/navigation";
 
 const Nav = ({Set}) => {
+    let SetX = null;
+
+    Set = Set || SetX
     const [active, setActive] = React.useState(false);
     const Togglee = () => {
         setActive(!active)
