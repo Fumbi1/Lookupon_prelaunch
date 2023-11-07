@@ -1,0 +1,123 @@
+.nav_wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    background: #FFF;
+    z-index: 0;
+    border-bottom: 0.6px solid #E0DCFE;
+    padding-block: 1rem;
+    padding-inline: 2.5%;
+}
+
+.LOGO{
+    margin-left: 10%;
+    width: 80%;
+    text-align: center;
+    color: #7666FD;
+    font-family: Outfit;
+    font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.menu{
+    width: fit-content;
+    display: none;
+}
+
+.non_active{
+    padding-left: 1rem;
+    position: absolute;
+    right: 0;
+    width: 80%;
+    z-index: 4;
+    background: #FFF;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: all 500ms;
+    display: none;
+}
+
+.active{
+    padding-left: 1rem;
+    position: absolute;
+    right: 0;
+    width: 80%;
+    z-index: 4;
+    background: #FFF;
+    height: 100vh;
+    transition: all 500ms;
+    display: none;
+}
+
+.first{
+    margin-top: 1rem;
+    color:#060132;
+    text-align: center;
+    font-family: Outfit;
+    font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.linkk{
+    text-decoration: none;
+    color: #060132;
+    font-family: Outfit;
+    font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.cont{
+    width: fit-content;
+    margin-inline: auto;
+    margin-top: 2rem;
+}
+
+.span{
+    color: #7666FD;
+    font-family: Outfit;
+    font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@media (max-width: 500px){
+    .non_active{
+        display: block;
+        padding-left: 1rem;
+        position: absolute;
+        right: 0;
+        width: 80%;
+        z-index: 4;
+        background: #FFF;
+        height: 100vh;
+        transform: translateX(100%);
+        transition: all 500ms;
+    }
+    
+    .active{
+        padding-left: 1rem;
+        position: absolute;
+        right: 0;
+        width: 80%;
+        z-index: 4;
+        background: #FFF;
+        height: 100vh;
+        transition: all 500ms;
+        display: block;
+    }
+
+    .menu{
+        width: fit-content;
+        display: block;
+    }
+}

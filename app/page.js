@@ -1,95 +1,45 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+import './page.css';
+import Tick from "./components/highlights/page";
+import Blue from "./components/buttonBlue/page";
+import White from "./components/buttonWhite/page";
+import Notify from './paths/waitlist/page';
+import Nav from './components/navigation/page';
+import React, { useState } from 'react';
 
 export default function Home() {
+const [modal, setModal] = React.useState(false);
+
+const Toggle = () => {
+  setModal(!modal);
+}
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
+    <main className='main_home'>
+      <Nav Set={Toggle}/>
+      <div className={modal === true? "mode_active" : "mode"}><Notify OnPress={Toggle}/></div>
+      <div className="firstFlex">
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+          <p className='title'>Discover great <span className="color">local<br/>businesses</span> around campus</p>
+          <p className='desc'>Connect with local businesses around you.</p>
         </div>
+
+        <div className='phone'>
+          <img src='/phone.svg' alt='' />
+        </div>
+
+        <Tick children="Sign up" />
+        <Tick children="Connect with local businesses" />
+        <Tick children="Rate and Review" />
+
+        <Blue title="Sign Up" location={Toggle} />
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <p className='business'>Do you own a business?</p>
+      <p className='connect'>Connect with customers easily with Lookupon<br/>business</p>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      <White title="Lookupon Business" location="business" />
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
   )
 }

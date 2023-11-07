@@ -1,0 +1,85 @@
+.main_home{
+    width: 100%;
+}
+
+.mode{
+    position: fixed;
+    width: 100%;
+    transform: translateX(-100%) scale(0.25);
+    transition: all 500ms;
+    
+}
+
+.mode_active{
+    position: fixed;
+    width: 100%;
+    transition: all 500ms;
+    transform: scale(1);
+}
+
+.firstFlex{
+    width: 100%;
+    padding-top: 7.5rem;
+}
+
+.title{
+    color: #060132;
+    text-align: center;
+    font-family: Outfit;
+    font-size: clamp(1.875rem, 1.2679rem + 3.0357vw, 4rem);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.color{
+    color: #7666FD;
+    text-align: center;
+    font-family: Outfit;
+    font-size: clamp(1.875rem, 1.2679rem + 3.0357vw, 4rem);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+.desc{
+    color: #060132;
+    text-align: center;
+    font-family: Outfit;
+    font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.phone{
+    width: fit-content;
+    margin-top: 2rem;
+    margin-inline: auto;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.business{
+    color: #060132;
+    text-align: center;
+    font-family: Outfit;
+    font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 2rem;
+}
+
+.connect{
+    color: #060132;
+    text-align: center;
+    font-family: Outfit;
+    font-size: clamp(1rem, 0.7857rem + 1.0714vw, 1.75rem);
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    margin-top: 0.5rem;
+}

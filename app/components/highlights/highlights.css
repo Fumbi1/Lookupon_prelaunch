@@ -1,0 +1,22 @@
+.flex{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0.5rem;
+    /* margin-bottom: 0.125rem; */
+}
+
+.img{
+    align-self: center;
+}
+
+.child{
+    color: #060132;
+    text-align: center;
+    font-family: Outfit;
+    font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
