@@ -99,3 +99,7 @@
     background: #7666FD;
     margin-bottom: 2rem;                                                                                                                                                                                    
 }
+
+.btn2:disabled{
+    opacity: 0.5;
+}

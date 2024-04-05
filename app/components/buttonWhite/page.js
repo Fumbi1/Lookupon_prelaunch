@@ -2,14 +2,9 @@
 import "./white.css";
 import { useRouter } from "next/navigation";
 
-const White = ({title, location}) => {
+const White = ({title= "Sign Up", location= "./paths/buttonBlue"}) => {
     const route = useRouter();
-    let titleX = "Sign Up";
-    let locationX = "./paths/buttonBlue";
-
-    title = title || titleX
-    location = location || locationX
-
+  
     return (
         <div className="container2">
             <div className="btn2" onClick={() => {route.push(`./paths/${location}`)}}>

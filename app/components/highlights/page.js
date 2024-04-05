@@ -1,5 +1,4 @@
 import "./highlights.css";
-import Image from "next/image";
 
 const Tick = ({ children }) => {
   let childrenX = "Sign Up";
@@ -9,7 +8,7 @@ const Tick = ({ children }) => {
   return (
     <div className="flex">
       <div className="img">
-        <Image src="/tick.svg" alt="omooo..." />
+        <img src="/tick.svg" alt="omooo..." />
       </div>
       <div className="child">
         <p>{children}</p>
