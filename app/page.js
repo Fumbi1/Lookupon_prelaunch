@@ -26,17 +26,27 @@ export default function Home() {
           <Image src="/food.png" alt="sold items" width="1114"  height="360"/>
         </div>
 
-        <div>
-          <p>Categories</p>
+        <div class="categories-section">
+          <p class="categories-header">Categories</p>
 
-          {categories.map((category) => {
-            return(
-              <div class="category" key={category.id}>
-                <Image src={category.image} alt="" width="48" height="48" />
-                <p>{category.title}</p>
-              </div>
-            )
-          })}
+          <div className="category-grid">
+            {categories.map((category) => {
+              return(
+                  <div class="category" key={category.id}>
+                    <Image src={category.image} alt="" width="48" height="48" />
+                    <p class="category-title">{category.title}</p>
+                  </div>
+              )
+            })}
+          </div>
+
+          <div>
+            <p>
+            Most Reviewed Businesses
+            </p>
+
+            
+          </div>
           
         </div>
       </div>

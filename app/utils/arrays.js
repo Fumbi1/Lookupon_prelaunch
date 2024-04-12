@@ -51,4 +51,11 @@ const categories = [
 }
 ]
 
+const cards = [
+    {
+        img: ,
+        
+    }
+]
+
 export { categories }

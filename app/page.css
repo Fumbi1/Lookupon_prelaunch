@@ -70,10 +70,47 @@
     font-weight: 600;
 }
 
+.categories-section{
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.categories-header{
+    margin-block: 3rem 1rem;
+    font-size: 1.25rem;
+    color: #060132;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.category-grid{
+    display: grid;
+    gap: 2.8rem;
+    grid-template-columns: auto auto auto auto auto;
+}
+
 .category{
     width: fit-content;
+    max-width: 11.69rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding-inline: 4.25rem;
     padding-block: 3.5rem;
     border-radius: 0.5rem;
-    background-color: #F2F2F2;
+    background-color: #FFF;
+    box-shadow: 1px 1px 1px 2px #F2F2F2;
+}
+
+.category-title{
+    font-size: 1.25rem;
+    color: #060132;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
 }
