@@ -2,7 +2,7 @@ import "./page.css";
 import SearchBar from "./components/search/page";
 import Button from "./components/button/page";
 import Image from "next/image";
-import { categories} from "./utils/arrays"
+import { categories, cards} from "./utils/arrays"
 
 export default function Home() {
   return (
@@ -45,7 +45,24 @@ export default function Home() {
             Most Reviewed Businesses
             </p>
 
-            
+            <div class="business-grid">
+              {
+                cards.map((card, index) => {
+                  return(
+                  <div class="business-card" key={index}>
+                    <Image src={card.img} height="252" width="360" />
+                    <p>{card.name}</p>
+                    <p>{card.time}</p>
+                    <p>{card.menu}</p>
+                    <div>
+                    <Image src="/comment.svg" height="19" width="18" />
+                    <p class="card-comment">{card.comment}</p>
+                    </div>
+                  </div>
+                  )
+                })
+              }
+            </div>
           </div>
           
         </div>
