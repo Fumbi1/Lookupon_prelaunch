@@ -1,0 +1,66 @@
+.business-card{
+    width: fit-content;
+    max-width: 22.5rem;
+    border-radius: 0.75rem;
+    background-color: #FFF;
+    box-shadow: 1px 1px 1px 2px #F2F2F2;
+}
+
+.business-pic{
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+}
+
+.card-details{
+    margin-inline: 1rem;
+    margin-bottom: 1.75rem;
+}
+
+.card-name{
+    font-size: 1rem;
+    color: #060132;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.5rem;
+}
+
+.card-time{
+    font-size: 1rem;
+    color: #72707D;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.5rem;
+}
+
+.card-menu{
+    font-size: 0.875rem;
+    color: #72707D;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.25rem;
+}
+
+.business-comment{
+    margin-top: 0.875rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.card-comment{
+    font-size: 0.875rem;
+    color: #17171A;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.25rem;
+}

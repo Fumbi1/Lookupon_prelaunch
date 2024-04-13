@@ -1,6 +1,7 @@
 import "./page.css";
 import SearchBar from "./components/search/page";
 import Button from "./components/button/page";
+import BusinessCard from "./components/businessCard/page";
 import Image from "next/image";
 import { categories, cards} from "./utils/arrays"
 
@@ -41,7 +42,7 @@ export default function Home() {
           </div>
 
           <div>
-            <p>
+            <p class="categories-header">
             Most Reviewed Businesses
             </p>
 
@@ -49,16 +50,9 @@ export default function Home() {
               {
                 cards.map((card, index) => {
                   return(
-                  <div class="business-card" key={index}>
-                    <Image src={card.img} height="252" width="360" />
-                    <p>{card.name}</p>
-                    <p>{card.time}</p>
-                    <p>{card.menu}</p>
-                    <div>
-                    <Image src="/comment.svg" height="19" width="18" />
-                    <p class="card-comment">{card.comment}</p>
-                    </div>
-                  </div>
+                  <BusinessCard
+                  key={index} img={card.img} namee={card.name} comment={card.comment}
+                  />
                   )
                 })
               }
