@@ -1,7 +1,7 @@
 const SearchBar = ({className, type, placeholder}) => {
 
     return (
-        <input class={className} type={type} placeholder={placeholder}/>
+        <input className={className} type={type} placeholder={placeholder}/>
     );
 }
 

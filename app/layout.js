@@ -1,6 +1,6 @@
 import "./globals.css";
-import Nav from "./components/navBar/page";
-import Footer from "./components/footer/page";
+import Nav from "../components/navBar/page";
+import Footer from "../components/footer/page";
 
 
 export const metadata = {

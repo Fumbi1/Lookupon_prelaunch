@@ -1,52 +1,59 @@
+"use client"
 import "./page.css";
-import SearchBar from "./components/search/page";
-import Button from "./components/button/page";
-import BusinessCard from "./components/businessCard/page";
+import { useRouter} from "next/navigation";
+import SearchBar from "../components/search/page";
+import Button from "../components/button/page";
+import BusinessCard from "../components/businessCard/page";
 import Image from "next/image";
 import { categories, cards} from "./utils/arrays"
 
 export default function Home() {
+
+  const path = useRouter();
+  const results = () => {
+    path.push("./paths/searchPage")
+  }
   return (
     <>
     <main>
-      <div class="first-section">
-        <h1 class="intro-header">
+      <div className="first-section">
+        <h1 className="intro-header">
           Explore local businesses
         </h1>
 
-        <p class="intro-desc">
+        <p className="intro-desc">
         Connect with local businesses around you.
         </p>
 
-        <div class="search-wrap">
+        <div className="search-wrap">
           <SearchBar className="searchbar" type="search" placeholder="restaurant, makeup, clothing..."/>
-          <Button value="Search" className="button" onClick={null} />
+          <Button value="Search" className="button" onClick={results} />
         </div>
 
-        <div class="display-wrap">
+        <div className="display-wrap">
           <Image src="/food.png" alt="sold items" width="1114"  height="360"/>
         </div>
 
-        <div class="categories-section">
-          <p class="categories-header">Categories</p>
+        <div className="categories-section">
+          <p className="categories-header">Categories</p>
 
           <div className="category-grid">
             {categories.map((category) => {
               return(
-                  <div class="category" key={category.id}>
-                    <Image src={category.image} alt="" width="48" height="48" />
-                    <p class="category-title">{category.title}</p>
+                  <div className="category" key={category.id}>
+                    <Image src={category.image} alt="omooo" width="48" height="48" />
+                    <p className="category-title">{category.title}</p>
                   </div>
               )
             })}
           </div>
 
           <div>
-            <p class="categories-header">
+            <p className="categories-header">
             Most Reviewed Businesses
             </p>
 
-            <div class="business-grid">
+            <div className="business-grid">
               {
                 cards.map((card, index) => {
                   return(

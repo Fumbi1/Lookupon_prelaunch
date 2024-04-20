@@ -1,5 +1,5 @@
 .first-section{
-    margin-top: 6.5rem;
+    margin-top: 8.75rem;
 }
 
 .intro-header{
@@ -62,7 +62,7 @@
 }
 
 .button{
-    background-color: #72707D;
+    background-color: #5F61A8;
     color: #FFFFFF;
     width: 13.5%;
     border-radius: 0.25rem;
@@ -100,6 +100,7 @@
     align-items: center;
     padding-inline: 4.25rem;
     padding-block: 3.5rem;
+    border: 1px solid var(--Secondary-light, rgba(242, 242, 242, 1));
     border-radius: 0.5rem;
     background-color: #FFF;
     box-shadow: 1px 1px 1px 2px #F2F2F2;
@@ -117,6 +118,6 @@
 
 .business-grid{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.25rem;
 }

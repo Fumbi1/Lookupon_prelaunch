@@ -14,6 +14,11 @@
     align-items: center;
 }
 
+.social-icons{
+    display: inline-flex;
+    gap: 2rem;
+}
+
 .link{
     font-size: 1rem;
     color: #DEDEDE;

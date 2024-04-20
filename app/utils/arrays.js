@@ -97,4 +97,64 @@ const cards = [
     
 ]
 
-export { categories, cards }
+const search_Results = [
+    {
+        img: "/spag.png",
+        name: "Hotsoup 'n' More",
+        time: "Open 10:00 AM - 07:00 PM",
+        menu: "Stir-fry Spaghetti, Noodles, Burgers, Swallow",
+        comment: "“The stir-fry spaghetti was really worth it! Wish i could even give you more than 5 stars”"
+    },
+    {
+        img: "/cinnamon.png",
+        name: "O’Chel Foods",
+        time: "Open 10:00 AM - 07:00 PM",
+        menu: "Pizza, Small Chops, Cinnamon Rolls, Donuts",
+        comment: "“The pizza was yummy. I love the way ur delivery was fast o! More patronage to come dear.”",
+    },
+    {
+        img: "/cinnamon.png",
+        name: "O’Chel Foods",
+        time: "Open 10:00 AM - 07:00 PM",
+        menu: "Pizza, Small Chops, Cinnamon Rolls, Donuts",
+        comment: "“The pizza was yummy. I love the way ur delivery was fast o! More patronage to come dear.”",
+    },
+    {
+        img: "/spag.png",
+        name: "Hotsoup 'n' More",
+        time: "Open 10:00 AM - 07:00 PM",
+        menu: "Stir-fry Spaghetti, Noodles, Burgers, Swallow",
+        comment: "“The stir-fry spaghetti was really worth it! Wish i could even give you more than 5 stars”"
+    },
+    {
+        img: "/spag.png",
+        name: "Hotsoup 'n' More",
+        time: "Open 10:00 AM - 07:00 PM",
+        menu: "Stir-fry Spaghetti, Noodles, Burgers, Swallow",
+        comment: "“The stir-fry spaghetti was really worth it! Wish i could even give you more than 5 stars”"
+    },
+    {
+        img: "/cinnamon.png",
+        name: "O’Chel Foods",
+        time: "Open 10:00 AM - 07:00 PM",
+        menu: "Pizza, Small Chops, Cinnamon Rolls, Donuts",
+        comment: "“The pizza was yummy. I love the way ur delivery was fast o! More patronage to come dear.”",
+    },
+    {
+        img: "/cinnamon.png",
+        name: "O’Chel Foods",
+        time: "Open 10:00 AM - 07:00 PM",
+        menu: "Pizza, Small Chops, Cinnamon Rolls, Donuts",
+        comment: "“The pizza was yummy. I love the way ur delivery was fast o! More patronage to come dear.”",
+    },
+    {
+        img: "/spag.png",
+        name: "Hotsoup 'n' More",
+        time: "Open 10:00 AM - 07:00 PM",
+        menu: "Stir-fry Spaghetti, Noodles, Burgers, Swallow",
+        comment: "“The stir-fry spaghetti was really worth it! Wish i could even give you more than 5 stars”"
+    },
+
+]
+
+export { categories, cards, search_Results };
