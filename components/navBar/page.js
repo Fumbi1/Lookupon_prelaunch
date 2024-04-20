@@ -18,7 +18,7 @@ const Nav = () => {
           <div className="user-wrap">
             <div className="dropdown-wrap">
               <div className="business" onClick={switch1}>
-                <Link href="/signIn">
+                <Link href="/signUp">
                   <p className="review">Lookupon for business</p>
                 </Link>
                 <Image className={toggle? "rotate" :  "rotate0"} src="expand.svg" width="20" height="20" alt="omooo"/>
