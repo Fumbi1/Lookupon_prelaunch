@@ -13,9 +13,9 @@ form{
 
 .form-desc{
     font-family: Outfit;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
-    line-height: 24px;
+    line-height: 1.5rem;
     letter-spacing: 0.0015em;
     text-align: center;
 }
@@ -78,8 +78,12 @@ form{
     align-items: center;
 }
 
-.row-input > input{
+.name-wrap{
     width: 47.5%;
+}
+
+.row-input > input{
+   width: fit-content;
 }
 
 input{

@@ -3,6 +3,7 @@
 import Button from "@/components/button/page";
 import Link from "next/link";
 import Image from "next/image";
+import { ZodErrors } from "@/components/custom/zodErrors/zodErrors";
 import { useFormState } from "react-dom"
 import { registerUserAction } from "@/components/actions/auth-actions";
 import "./signUp.css";
@@ -33,11 +34,21 @@ const SignUpRoute = () => {
         <hr className="hr"/>
       </div>
       <div className="row-input">
-        <input type="text" name="firstname" placeholder="First Name" id="a" />
-        <input type="text" name="lastname" placeholder="Last Name" id="b" />
+        <div className="name-wrap">
+          <input type="text" name="firstname" placeholder="First Name" id="a" />
+          <ZodErrors error={formState?.zodErrors?.first_name}/>
+        </div>
+
+        <div className="name-wrap">
+          <input type="text" name="lastname" placeholder="Last Name" id="b" />
+          <ZodErrors error={formState?.zodErrors?.last_name}/>
+        </div>
       </div>
-      <input type="email" name="email" placeholder="Email" id="c" /><br />
+      <input type="email" name="email" placeholder="Email" id="c" />
+      <ZodErrors error={formState?.zodErrors?.email}/>
+      <br />
       <input type="password" name="password" placeholder="Password" id="d" />
+      <ZodErrors error={formState?.zodErrors?.password}/><br />
 
       <Button type="submit" value="Sign in" className="sign-up-btn" />
       <div className="last-part">

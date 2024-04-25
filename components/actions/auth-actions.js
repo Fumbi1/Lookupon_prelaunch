@@ -1,14 +1,24 @@
 "use server";
 import { ZodError, z } from "zod"
 const schemaRegister = z.object({
-    first_name: z.string().min(2, {
+    first_name: z.string({
+        required_error: "First name is required",
+        invalid_type_error:"Name must be a string",
+    }).min(2, {
         message: "First name must be at least 2 characters",
+    }).regex(/^[A-Za-z]+$/, {
+        message: "First name must contain only letters",
     }),
-    last_name: z.string().min(2, {
+    last_name: z.string({
+        required_error: "Last name is required",
+        invalid_type_error:"Name must be a string",
+    }).min(2, {
         message: "Last name must be at least 2 characters",
+    }).regex(/^[A-Za-z]+$/, {
+        message: "First name must contain only letters",
     }),
     email: z.string().email({
-        message: "Kindly innput a valid email address",
+        message: "Kindly input a valid email address",
     }),
     password: z.string().min(6).max(20, {
         message: "Password must be between 6 and 20 characters",
@@ -17,7 +27,7 @@ const schemaRegister = z.object({
 
 
 export async function registerUserAction(prevState, formData){
-    console.log("Hello from this side");
+    console.log("Working");
 
     const validatedField = schemaRegister.safeParse({
         first_name: formData.get("firstname"),
