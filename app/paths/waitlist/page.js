@@ -4,52 +4,45 @@ import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const Notify = ({ OnPress }) => {
-  let OnPressX = null;
-
-  OnPress = OnPress || OnPressX;
-  const Location = useRouter();
+  const router = useRouter();
   const [email, setEmail] = useState("");
-  const [disable, setDisable] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-
-  const UponChange = (e) => {
+  const handleChange = (e) => {
     setEmail(e.target.value);
   };
 
-  const Email = {
-    email: email, 
-  }
-
-  const Stringify = JSON.stringify(Email);
-
-//   console.log(Stringify);
-
-  const Waitlist = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
+    setError(null);
+
     const mainUrl = "https://lookuponba.onrender.com";
-    const waitlist = `${mainUrl}/addToWaitlist`;
-    const options = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(Email),
-    };
-    
-    setDisable(true)
-    console.log(disable)
-    
+    const waitlistUrl = `${mainUrl}/addToWaitlist`;
+
     try {
-      const response = await fetch(waitlist, options);
-      console.log(response);
-      if (response.ok) {
-        Location.push("/paths/questionaire");
+      const response = await fetch(waitlistUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to add to waitlist");
       }
+
+      // Simulating a delay to show success message
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      router.push("/paths/questionaire");
     } catch (error) {
-      console.log(error);
+      console.error(error);
+      setError("An error occurred. Please try again.");
     } finally {
-      e.target.reset();
-      setDisable(false)
+      setIsLoading(false);
     }
   };
 
@@ -61,17 +54,22 @@ const Notify = ({ OnPress }) => {
         <p className="alert">Coming Soon!!</p>
         <p className="notified">Get notified when we launch.</p>
 
-        <form className="form_flex" onSubmit={Waitlist}>
+        <form className="form_flex" onSubmit={handleSubmit}>
           <input
             className="email"
-            onChange={UponChange}
+            onChange={handleChange}
             type="email"
             placeholder="Email Address"
             required
+            disabled={isLoading}
           />
           <br />
-          <button className="btn2" disabled={disable}>Notify me</button>
+          <button className="btn2" disabled={isLoading}>
+            {isLoading ? "Processing..." : "Notify me"}
+          </button>
         </form>
+        
+        {error && <p className="error">{error}</p>}
       </div>
     </div>
   );
