@@ -7,7 +7,7 @@ const White = ({title= "Sign Up", location= "./paths/buttonBlue"}) => {
   
     return (
         <div className="container2">
-            <div className="btn2" onClick={() => {route.push(`./paths/${location}`)}}>
+            <div className="btn22" onClick={() => {route.push(`./paths/${location}`)}}>
                 {title}
             </div>
         </div>
