@@ -39,7 +39,7 @@
     font-size: clamp(1.875rem, 1.0577rem + 3.2692vw, 4rem);
     font-style: normal;
     font-weight: 600;
-    line-height: 1.875rem;
+    line-height:  clamp(1.875rem, 1.0577rem + 3.2692vw, 4rem);
 }
 
 
@@ -51,6 +51,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    margin-top: 0.5rem;
 }
 
 .phone{
@@ -82,4 +83,8 @@
     font-weight: 200;
     line-height: normal;
     margin-top: 0.5rem;
+}
+
+@media (max-width: 760px) {
+
 }

@@ -26,7 +26,7 @@
     font-family: Outfit, sans-serif;
     font-size: clamp(1.875rem, 1.0577rem + 3.2692vw, 4rem);
     font-weight: 600;
-    line-height: 1.875rem;
+    line-height:  clamp(1.875rem, 1.0577rem + 3.2692vw, 4rem);
 }
 
 .colour{

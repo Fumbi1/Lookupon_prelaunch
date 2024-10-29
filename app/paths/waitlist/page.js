@@ -48,7 +48,7 @@ const Notify = ({ OnPress }) => {
 
   return (
     <div>
-      <div className="main_modal" onClick={OnPress}></div>
+      <div className="main_modal" onClick={() => {isLoading === false && OnPress}}></div>
       <div className="card">
         <p className="logo">Lookupon</p>
         <p className="alert">Coming Soon!!</p>
