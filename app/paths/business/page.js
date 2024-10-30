@@ -18,7 +18,7 @@ const Business = () => {
     return (
         <main className="main2">
             <Nav2 Set={Toggle}/>
-            <div className={modal === true? "mode_active" : "mode"}><Notify OnPress={() => Toggle}/></div>
+            <div className={modal === true? "mode_active" : "mode"}><Notify OnPress={Toggle}/></div>
             <p className="title2">Start, <span className="colour">Grow</span> and Advertise<br/>your <span className="colour">business</span></p>
             <p className="desc2">Connect with customers and grow your business.</p>
 
