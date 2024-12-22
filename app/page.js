@@ -20,7 +20,7 @@ const Toggle = () => {
       <div className={modal === true? "mode_active" : "mode"}><Notify OnPress={Toggle}/></div>
       <div className="firstFlex">
         <div>
-          <p className='title'>Discover great <span className="color">local<br/>businesses</span> around campus</p>
+          <p className='title'>Discover great <span className="color">local<br/>businesses</span> around you</p>
           <p className='desc'>Connect with local businesses around you.</p>
         </div>
 

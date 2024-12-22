@@ -7,6 +7,7 @@ import Nav2 from "@/app/components/navigation2/page";
 import Notify from "../waitlist/page";
 import React, { useState } from 'react';
 
+
 const Business = () => {
 
     const [modal, setModal] = React.useState();
