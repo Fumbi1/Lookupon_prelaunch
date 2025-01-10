@@ -23,14 +23,14 @@ const Business = () => {
             <p className="title2">Start, <span className="colour">Grow</span> and Advertise<br/>your <span className="colour">business</span></p>
             <p className="desc2">Connect with customers and grow your business.</p>
 
-            <Tick children="Sign up" />
+            <Tick children="Sign Up" />
             <Tick children="Add business info"/>
             <Tick children="Unlock your free webpage"/>
             <Tick children="Connect with customers"/>
 
             <p className="desc3">Lookupon makes it easy to connect with customers and grow your business</p>
 
-            <Blue title="Sign Up" location={Toggle}/>
+            <Blue title="Join the private beta!" location={Toggle}/>
 
             <div className="img_div">
                 <img src="/demo.png" alt="" />

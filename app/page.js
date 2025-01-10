@@ -32,7 +32,7 @@ const Toggle = () => {
         <Tick children="Connect with local businesses" />
         <Tick children="Rate and Review" />
 
-        <Blue title="Sign Up" location={Toggle} />
+        <Blue title="Join the private beta!" location={Toggle} />
       </div>
 
       <p className='business'>Do you own a business?</p>

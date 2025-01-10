@@ -36,7 +36,7 @@ const Notify = ({ OnPress }) => {
 
       // Simulating a delay to show success message
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       router.push("/paths/questionaire");
     } catch (error) {
       console.error(error);
@@ -48,11 +48,17 @@ const Notify = ({ OnPress }) => {
 
   return (
     <div>
-      <div className="main_modal" onClick={ !isLoading? OnPress : undefined }></div>
+      <div className="main_modal" onClick={!isLoading ? OnPress : undefined}></div>
       <div className="card">
         <p className="logo">Lookupon</p>
-        <p className="alert">Coming Soon!!</p>
-        <p className="notified">Get notified when we launch.</p>
+        <p className="alert">Private beta</p>
+        <p className="notified">
+          Be among the first to try out Lookupon!
+        </p>
+
+        <p className="update">
+          The beta is currently full. Join the waitlist for future updates!
+        </p>
 
         <form className="form_flex" onSubmit={handleSubmit}>
           <input
@@ -65,10 +71,10 @@ const Notify = ({ OnPress }) => {
           />
           <br />
           <button className="btn2" disabled={isLoading}>
-            {isLoading ? "Processing..." : "Notify me"}
+            {isLoading ? "Processing..." : "Join the private beta!"}
           </button>
         </form>
-        
+
         {error && <p className="error">{error}</p>}
       </div>
     </div>

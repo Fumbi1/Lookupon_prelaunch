@@ -25,7 +25,7 @@ const Nav = ({Set}) => {
 
             <div className={active === true? "active" : "non_active"}>
                 <img src="/remove.svg" alt="" onClick={Togglee}/>
-                <p className="first" onClick={Set}>Sign Up</p>
+                <p className="first" onClick={Set}>Private beta</p>
                 <div className="cont">
                     <Link className="linkk" href="/paths/business" onClick={() => {setActive(false)}}>Lookupon <span className="span2">business</span></Link>
                 </div>

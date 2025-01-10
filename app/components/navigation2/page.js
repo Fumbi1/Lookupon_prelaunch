@@ -31,7 +31,7 @@ const Nav2 = ({ Set }) => {
       <div className={active === true ? "active" : "non_active"}>
         <img src="/remove.svg" alt="" onClick={Togglee} />
         <p className="first" onClick={Set}>
-          Sign Up
+          Private beta
         </p>
         <div className="cont">
           <Link

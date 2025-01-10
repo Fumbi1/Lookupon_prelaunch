@@ -47,6 +47,17 @@
     margin-block: 0.25rem 1rem;
 }
 
+.update{
+    color: #DC362E;
+    text-align: center;
+    font-family: Outfit;
+    font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-block: 0.25rem 1rem;
+}
+
 .form_flex{
     width: 80%;
     margin-inline: auto;
